@@ -1,0 +1,25 @@
+<table class="hoverTable">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let u of users; let i = index" [attr.data-index]="i">
+    <td >{{ u.name }} &nbsp;</td>
+    <td> {{ u.lastName }}</td>
+    <td><button mat-button color="primary" (click)="delete(i)">X</button></td>
+  </tr>
+</table>
+
+<table class="usrTable">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr>
+    <td ><input [(ngModel)]="usrName"> &nbsp;</td>
+    <td> <input [(ngModel)]="usrLastName"></td>
+    <td><button mat-button color="primary" (click)="add()">&nbsp; + &nbsp;</button></td>
+  </tr>
+</table>
